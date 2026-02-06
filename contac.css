@@ -47,6 +47,7 @@ body {
 
 /* ================= contac ================= */
 .contact-card {
+    margin: auto;
     margin-top: 60px;
             display: flex;
             max-width: 900px;
