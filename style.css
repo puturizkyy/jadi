@@ -142,27 +142,7 @@ body {
     border: 8px solid #bbdefb;
 }
 
-/* ================= WA BUTTON ================= */
-.wa {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 9999;
-}
 
-.wa button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-}
-
-.wa img {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
 
 /* ================= TOURS ================= */
 .tours {
@@ -720,7 +700,27 @@ body {
     color: #888;
     letter-spacing: 0.5px;
 }
+/* ================= WA BUTTON ================= */
+.wa {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 9999;
+}
 
+.wa button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.wa img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
 /* ================= BOTTOM BAR ================= */
 .bottom-bar {
     position: fixed;

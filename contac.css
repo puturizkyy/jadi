@@ -1,0 +1,415 @@
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* body.no-scroll {
+    overflow: hidden;
+} */
+
+body {
+    background: #e3f2fd;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background: rgba(13, 71, 161, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* ================= contac ================= */
+.contact-card {
+    margin-top: 60px;
+            display: flex;
+            max-width: 900px;
+            width: 100%;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            min-height: 450px;
+        }
+
+        /* BAGIAN KIRI - FORM */
+        .form-section {
+            flex: 1.4;
+            padding: 35px;
+        }
+
+        .form-section h2 {
+            font-size: 26px;
+            margin-bottom: 25px;
+            color: #2c3136;
+        }
+
+        /* Baris Input Sejajar */
+        .input-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .input-group {
+            flex: 1;
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #fdfdfd;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus, .input-group textarea:focus {
+            border-color: #0d3b2e;
+            background: #fff;
+        }
+
+        .btn-send {
+            background: #2c3136;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-send:hover {
+            background: #1a1d20;
+        }
+
+        /* BAGIAN KANAN - INFO */
+        .info-section {
+            flex: 1;
+            background: #0d3b2e;
+            padding: 35px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .info-header h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 13.5px;
+            color: #ddd;
+            line-height: 1.4;
+        }
+
+        .img-preview {
+            width: 100%;
+            height: 120px;
+            background: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=500&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+
+        .socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .s-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .s-icon:hover {
+            background: #fff;
+            color: #0d3b2e;
+        }
+/* ================= FOOTER ================= */
+.site-footer {
+    background: #0d47a1;
+    color: #ffffff;
+    padding: 60px 20px 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 25px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.about-content strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.about-text {
+    font-size: 14px;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.footer-links li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.social-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.social-circle {
+    width: 38px;
+    height: 38px;
+    background-color: #4a4f54;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-circle:hover {
+    background-color: #ffffff;
+    color: #2c3136;
+    transform: translateY(-3px);
+}
+
+.contact-box {
+    background-color: #1a1d20;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 13.5px;
+    color: #e4e6eb;
+}
+
+.contact-item span {
+    font-size: 18px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 25px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #888;
+    letter-spacing: 0.5px;
+}
+
+/* ================= WA BUTTON ================= */
+.wa {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 9999;
+}
+
+.wa button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.wa img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= BOTTOM BAR ================= */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 -4px 10px rgba(0,0,0,.1);
+    z-index: 999;
+}
+
+.bar-item {
+    text-decoration: none;
+    color: #64748b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.bar-item span {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.bar-item.active {
+    color: #0a1f44;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 750px) {
+    nav a {
+        display: none;
+    }
+/* tes */
+.contact-card {
+                flex-direction: column;
+            }
+            .input-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+    .bottom-bar {
+        display: flex;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .social-group,
+    .contact-item {
+        justify-content: center;
+    }
+
+    .footer-links li {
+        padding-left: 0;
+    }
+
+    .footer-links li::before {
+        display: none;
+    }
+}
+@media (max-width: 383px) {
+    /* .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+    } */
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="detail-tour.css">
+    </head>
+    <body>
+        <!-- ================= NAVBAR ================= -->
+        <header class="navbar">
+            <div class="logo">🌼 Explore Bali</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="tour.html">Tours</a>
+                <a href="fqa.html">FAQ</a>
+                <a href="contac.html">Contact</a>
+            </nav>
+        </header>
+
+        <!-- ================= footer ================= -->
+
+        <section class="hero">
+            <div>
+                <h1>Nusa Penida Adventure</h1>
+                <span style="font-size: 1.1rem;">⭐⭐⭐⭐⭐ 4.8 (210 Reviews)</span>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="content">
+                <section class="article-section">
+                    <h2>Jelajahi Surga Tersembunyi</h2>
+                    <p>Nusa Penida menawarkan pemandangan tebing kapur yang
+                        menjulang tinggi.</p>
+
+                    <div class="history-article right">
+                        <h3 class="history-title">Kelingking Beach</h3>
+                        <div class="history-body">
+                            <img
+                                src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff"
+                                alt="Kelingking">
+                            <p>Ikon paling terkenal dari Nusa Penida yang
+                                menyerupai kepala dinosaurus T-Rex.</p>
+                        </div>
+                    </div>
+
+                    <div class="history-article left">
+                        <h3 class="history-title">Broken Beach</h3>
+                        <div class="history-body">
+                            <img
+                                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                                alt="Broken Beach">
+                            <p>Struktur geologi unik berupa lubang raksasa di
+                                tengah tebing.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="booking-sidebar">
+                <div class="card">
+                    <div class="card-title">👥 Jumlah Peserta</div>
+                    <div class="pax-row">
+                        <span
+                            style="font-weight: 600; font-size: 0.9rem;">Dewasa
+                            (10-80 thn)</span>
+                        <div
+                            style="display: flex; align-items: center; gap: 12px;">
+                            <button class="circle-btn"
+                                onclick="updatePax(-1)">−</button>
+                            <span id="paxDisplay"
+                                style="font-weight:700; width: 20px; text-align: center;">1</span>
+                            <button class="circle-btn"
+                                onclick="updatePax(1)">+</button>
+                        </div>
+                    </div>
+
+                    <hr
+                        style="border: 0; border-top: 1px solid #f1f5f9; margin: 20px 0;">
+
+                    <div id="calendarView">
+                        <div class="card-title">📅 Pilih Tanggal</div>
+                        <div
+                            style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 10px;">
+                            <button onclick="moveMonth(-1)"
+                                style="border:none; background:none; cursor:pointer; font-weight:bold;">❮</button>
+                            <b id="monthLabel" style="font-size:0.9rem">Maret
+                                2026</b>
+                            <button onclick="moveMonth(1)"
+                                style="border:none; background:none; cursor:pointer; font-weight:bold;">❯</button>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid"></div>
+                    </div>
+
+                    <div id="selectionHeader"
+                        style="display:none; margin-top: 10px;">
+                        <div
+                            style="color: var(--btn-blue); cursor: pointer; font-weight: 700; font-size: 0.9rem;"
+                            onclick="resetCalendar()">
+                            ❮ Kembali ke Kalender (<span id="pickedDateLabel">19
+                                Maret 2026</span>)
+                        </div>
+                    </div>
+
+                    <div id="optionsView">
+                        <div class="card-title"
+                            style="font-size: 0.85rem; margin-top: 20px;">🕒
+                            Waktu</div>
+                        <div class="time-grid">
+                            <button class="time-btn active"
+                                onclick="selectTime(this, '08:00')">08:00</button>
+                            <button class="time-btn"
+                                onclick="selectTime(this, '10:00')">10:00</button>
+                            <button class="time-btn"
+                                onclick="selectTime(this, '12:00')">12:00</button>
+                        </div>
+
+                        <div class="card-title"
+                            style="font-size: 0.85rem; margin-top: 20px;">📦
+                            Paket</div>
+                        <div class="option-card selected"
+                            onclick="selectOpt(this, 'Bali Quad Bike Pass All-Inclusive Bali Quad Bike Pass All-InclusiveBali Quad Bike Pass All-Inclusive', 91)">
+                            <div
+                                style="display:flex; justify-content:space-between; font-weight:700;">
+                                <span style="font-size: 0.8rem;">All-Inclusive
+                                    Pass</span><span>$91</span>
+                            </div>
+                            <div class="details">Transport Private PP & Makan
+                                Siang.</div>
+                        </div>
+
+                        <div class="option-card"
+                            onclick="selectOpt(this, 'Bali Quad Bike - Standard', 75)">
+                            <div
+                                style="display:flex; justify-content:space-between; font-weight:700;">
+                                <span style="font-size: 0.8rem;">Standard
+                                    Pass</span><span>$75</span>
+                            </div>
+                            <div class="details">Helm, Sepatu & Pemandu.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ticket-container">
+                    <div class="ticket">
+                        <div class="ticket-left">
+                            <div class="ticket-title" id="resTitle">Bali Quad
+                                Bike Pass All-Inclusive</div>
+                            <div class="ticket-pax">Dewasa: <span
+                                    id="resPaxInfo">1 x $91.00</span></div>
+                        </div>
+                        <div class="ticket-divider">
+                            <span class="tear-text">RESERVATION</span>
+                        </div>
+                        <div class="ticket-right">
+                            <div class="ticket-time" id="resTime">08:00</div>
+                            <div class="ticket-date" id="resDate">Thu, 19 Mar
+                                26</div>
+                            <div class="ticket-total-label">Total Bayar</div>
+                            <div class="ticket-total-val"
+                                id="resTotal">$91.00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="checkout-btn"
+                    onclick="window.location.href='lbok.html'">
+                    Checkout Sekarang 🔒
+                </button>
+            </aside>
+        </div>
+
+        <!-- ================= footer ================= -->
+        <footer class="site-footer">
+            <div class="footer-container">
+
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <div class="about-content">
+                        <strong>🏔️ Rukmana Bali Tour</strong>
+                        <p class="about-text">
+                            Rukmana Bali Tour is your gateway to discovering new
+                            horizons.
+                            We offer curated travel experiences. Join us and
+                            embark on your next adventure!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>QUICK LINKS</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>FOLLOW US</h3>
+                    <div class="social-group">
+                        <a href="#" class="social-circle">f</a>
+                        <a href="#" class="social-circle">t</a>
+                        <a href="#" class="social-circle">o</a>
+                        <a href="#" class="social-circle">i</a>
+                        <a href="#" class="social-circle">y</a>
+                    </div>
+                    <p style="font-size: 14px; color: #b0b3b8;">Stay
+                        connected!</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>CONTACT US</h3>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <p>Jl. Mangut No.19, Carangsari, Kec. Petang, Kabupaten
+                            Badung, Bali 80353</p>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <p>info@rukmanabalitour.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <p>0878-6220-7901</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rukmana Bali Tour. All rights reserved.</p>
+            </div>
+        </footer>
+        <!-- ================= BOTTOM BAR ================= -->
+        <nav class="bottom-bar">
+            <a href="#profile" class="bar-item">
+                <span style="opacity: 0;">🖼️🖼️</span>
+                <small></small>
+            </a>
+            <a href="index.html" class="bar-item active">
+                <span>🖼️</span>
+                <small>Galeri</small>
+            </a>
+            <a href="tour.html" class="bar-item">
+                <span>📅</span>
+                <small>Booking</small>
+            </a>
+            <a href="fqa.html" class="bar-item">
+                <span>💬</span>
+                <small>Chat</small>
+            </a>
+            <a href="contac.html" class="bar-item">
+                <span>👤</span>
+                <small>Profil</small>
+            </a>
+        </nav>
+        <!-- ================= wa button ================= -->
+        <section class="wa">
+            <button><img src="tamplate.jpg" alt="WhatsApp"></button>
+        </section>
+
+        <script>
+        const sidebar = document.getElementById("mySidebar");
+        const toggleBtn = document.getElementById("sidebarToggle");
+
+        function toggleSidebar() {
+            sidebar.style.width = sidebar.style.width === "150px" ? "0" : "150px";
+            toggleBtn.classList.toggle("active");
+        }
+
+        let currentPax = 1;
+        let selectedPrice = 91;
+        let viewDate = new Date(2026, 2, 1);
+
+        function updatePax(change) {
+            currentPax = Math.max(1, currentPax + change);
+            document.getElementById('paxDisplay').innerText = currentPax;
+            updateSummary();
+        }
+
+        function drawCalendar() {
+            const grid = document.getElementById('calendarGrid');
+            grid.innerHTML = '';
+            document.getElementById('monthLabel').innerText = new Intl.DateTimeFormat('id-ID', {month:'long', year:'numeric'}).format(viewDate);
+            ['M','S','S','R','K','J','S'].forEach(d => grid.insertAdjacentHTML('beforeend', `<div style="text-align:center; font-size:0.7rem; font-weight:700; color:#94a3b8; padding-bottom:5px;">${d}</div>`));
+            const year = viewDate.getFullYear(), month = viewDate.getMonth();
+            let shift = new Date(year, month, 1).getDay();
+            for (let i = 0; i < shift; i++) grid.insertAdjacentHTML('beforeend', '<div></div>');
+            for (let i = 1; i <= new Date(year, month + 1, 0).getDate(); i++) {
+                const div = document.createElement('div');
+                div.className = 'day-cell' + (i === 19 && month === 2 ? ' selected' : '');
+                div.innerText = i;
+                div.onclick = () => {
+                    const d = new Date(year, month, i);
+                    const opt = { weekday: 'short', day: 'numeric', month: 'short', year: '2-digit' };
+                    document.getElementById('pickedDateLabel').innerText = d.toLocaleDateString('id-ID', {day:'numeric', month:'long'});
+                    document.getElementById('resDate').innerText = d.toLocaleDateString('en-US', opt);
+                    document.getElementById('calendarView').style.display = 'none';
+                    document.getElementById('selectionHeader').style.display = 'block';
+                    document.getElementById('optionsView').style.display = 'block';
+                };
+                grid.appendChild(div);
+            }
+        }
+
+        function resetCalendar() {
+            document.getElementById('calendarView').style.display = 'block';
+            document.getElementById('selectionHeader').style.display = 'none';
+            document.getElementById('optionsView').style.display = 'none';
+        }
+
+        function selectOpt(card, title, price) {
+            document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            selectedPrice = price;
+            document.getElementById('resTitle').innerText = title;
+            updateSummary();
+        }
+
+        function selectTime(btn, time) {
+            document.querySelectorAll('.time-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('resTime').innerText = time;
+        }
+
+        function updateSummary() {
+            document.getElementById('resPaxInfo').innerText = `${currentPax} x $${selectedPrice.toFixed(2)}`;
+            document.getElementById('resTotal').innerText = `$${(currentPax * selectedPrice).toFixed(2)}`;
+        }
+
+        function moveMonth(s) { viewDate.setMonth(viewDate.getMonth() + s); drawCalendar(); }
+
+        drawCalendar();
+        updateSummary();
+        </script>
+    </body>
+</html>
